@@ -1,7 +1,12 @@
+* {
+  outline: none;
+}
+
 body {
   display: grid;
-  grid-column-start: repeat(7, 1fr);
-  grid-template-rows: repeat(13, 1fr);
+  font-family: 'Roboto', sans-serif;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .top-nav {
@@ -12,14 +17,49 @@ body {
 }
 
 .sidebar {
+  background-color: #354051;
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 13;
 }
 
-.name-dropdown {
+.sidebar-profile-image {
+  border-radius: 50%;
+  display: block;
+  height: 7rem;
+  margin: 1rem auto 0;
+  width: auto;
+}
+
+.profile-name-link {
+  display: block;
+  text-align: center;
   
+}
+
+.profile-name-link, .name-dropdown-links{
+  color: red;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.name-dropdown {
+  background-color: #fff;
+  border: 2px solid #000;
+  display: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 7rem;
+}
+
+.name-dropdown-links {
+  display: block;
+}
+
+.profile-name-link:hover + .name-dropdown{
+  display: block;
 }
 
 header {
