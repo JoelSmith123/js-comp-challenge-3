@@ -4,39 +4,67 @@
   <title>Static Comp Challenge 3 - Joel Smith</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
-  <nav class='top-nav'></nav>
+  <nav class='top-nav'>
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-search"></i>
+      <form>
+        <input type="search" id="mySearch" name="q" placeholder="Search for a job, task, or resume">  
+      </form>
+    <i class="fas fa-user-plus"></i>
+    <i class="fas fa-list-alt"></i>
+
+
+
+  </nav>
   <nav class='sidebar'>
     <img class='sidebar-profile-image' src="images/terry-with-spoon.jpg">
-    <h2><a class="profile-name-link" href=''>Sgt. Terry Crews</a>
+    <h2>
+      <a class="profile-name-link" href=''>Sgt. Terry Crews<i class="fas fa-angle-down"></i></a>
       <ul class="name-dropdown">
         <li class='name-dropdown-links'>yoghurt</li>
         <li class='name-dropdown-links'>yoghurt</li>
       </ul>
-    </h2>   
-    <h4>Main</h4>
-    <ul>
-      <li><img src=""><h3>HOME</h3></li>
-      <li><img src=""><h3>JOBS</h3></li>
-      <li><img src=""><h3>RESUMES</h3></li>
-      <li><img src=""><h3>TASKS</h3></li>
-      <li><img src=""><h3>CALENDAR</h3></li>
+    </h2> 
+    <hr />  
+    <h4 class="sidebar-link-title">Main</h4>
+    <ul class="sidebar-ul">
+      <li class="sidebar-link"><i class="fas fa-home"></i><h3 class="sidebar-link-text">HOME</h3></li>
+      <li class="sidebar-link"><i class="fas fa-briefcase"></i><h3 class="sidebar-link-text">JOBS</h3></li>
+      <li class="sidebar-link"><i class="fas fa-file-invoice"></i><h3 class="sidebar-link-text">RESUMES</h3></li>
+      <li class="sidebar-link"><i class="fas fa-clipboard-list"></i><h3 class="sidebar-link-text">TASKS</h3></li>
+      <li class="sidebar-link"><i class="far fa-calendar-alt"></i><h3 class="sidebar-link-text">CALENDAR</h3></li>
     </ul>
-    <h4>Admin</h4>
-    <ul>
-      <li><img src=""><h3>USERS</h3></li>
-      <li><img src=""><h3>LOCATIONS</h3></li>
-      <li><img src=""><h3>WORKFLOWS</h3></li>
-      <li><img src=""><h3>JOB BOARDS</h3></li>
-      <li><img src=""><h3>SOCIAL</h3></li>
+    <hr />
+    <h4 class="sidebar-link-title">Admin</h4>
+    <ul class="sidebar-ul">
+      <li class="sidebar-link"><i class="fas fa-user-friends"></i><h3 class="sidebar-link-text">USERS</h3></li>
+      <li class="sidebar-link"><i class="fas fa-map-marker-alt"></i><h3 class="sidebar-link-text">LOCATIONS</h3></li>
+      <li class="sidebar-link"><i class="fas fa-code-branch"></i><h3 class="sidebar-link-text">WORKFLOWS</h3></li>
+      <li class="sidebar-link"><i class="far fa-newspaper"></i><h3 class="sidebar-link-text">JOB BOARDS</h3></li>
+      <li class="sidebar-link"><i class="fas fa-atom"></i><h3 class="sidebar-link-text">SOCIAL</h3></li>
     </ul>
-    <h4>Categories</h4>
-    <ul>
-      <li><img src=""><h4>Administration</h4></li>
-      <li><img src=""><h4>Design</h4></li>
-      <li><img src=""><h4>Executive</h4></li>
-      <li><img src=""><h4>Human Resources</h4></li>
+    <hr />
+    <h4 class="sidebar-link-title">Categories</h4>
+    <ul class="sidebar-ul">
+      <li class="sidebar-link sidebar-link-checkbox">
+        <input type="checkbox" id="administration" name="administration" value="administration">
+        <label for="administration">Administration</label>
+      </li>
+      <li class="sidebar-link sidebar-link-checkbox">
+        <input type="checkbox" id="design" name="design" value="design">
+        <label for="design">Design</label>
+      </li>
+      <li class="sidebar-link sidebar-link-checkbox">
+        <input type="checkbox" id="executive" name="executive" value="executive">
+        <label for="executive">Executive</label>
+      </li>
+      <li class="sidebar-link sidebar-link-checkbox">
+        <input type="checkbox" id="human-resources" name="human resources" value="human resources">
+        <label for="human-resources">Human Resources</label>
+      </li>
     </ul>
   </nav>
   <header></header>
