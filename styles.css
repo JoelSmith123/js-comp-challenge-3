@@ -5,80 +5,208 @@
 body {
   display: grid;
   font-family: 'Roboto', sans-serif;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto;
   margin: 0;
 }
 
+.main-page-fill {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-template: 250px 1fr/ initial;
+}
+
+header {
+  border-bottom: 2px solid #000;
+  display: grid;
+  grid-column: 1 / 2;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 250px;
+}
+
+/*top navigation styles*/
+/*///////////////////////////////////////////////////*/
 .top-nav {
-  border: 1px solid #000;
-  grid-column-start: 3;
-  grid-column-end: 11;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  border-bottom: 1px solid #000;
+  display: grid;
+  grid-column: 1 / 3;
+  grid-template: auto / 83px 1fr 83px 83px 83px;
 }
 
-.top-nav * {
+.top-nav .fas {
+  color: #000;
+}
+
+.icon-parent {
+  box-sizing: border-box;
+  /*border: 1px solid #000;*/
   display: inline-block;
+  line-height: 78px;
+  text-align: center;
+
 }
 
-.top-nav input {
-  height: 3rem;
+.icon-parent:hover {
+  background-color: blue;
+  cursor: pointer;
 }
 
-.top-nav input[type="search"] {
-  border-style: none;
-  margin: auto;
+.parent-fa-bars {
+  border-right: 1px solid #000;
+  grid-column: 1 / 2;
+}
+
+.parent-fa-search {
+  display: inline-block;
+  line-height: 78px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+#mySearch {
+    border-style: none;
+  display: inline-block;
   font-size: 1rem;
-  vertical-align: text-top;
-  width: 18rem;
-  -webkit-appearance:none;
+  height: 3rem;
+  outline: none;
+  width: 85%;
 }
 
-.fa-bars, .fa-bars::before,
-.fa-search, .fa-search::before,
-.fa-user-plus, .fa-user-plus::before {
-  color: #808080;
+#mySearch::placeholder {
+  /*font-size: 1.5rem;*/
+}
+
+.parent-fa-user-plus {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  grid-column: 3 / 4;
+}
+
+.parent-fa-list-alt {
+  border-right: 1px solid #000;
+  grid-column: 4 / 5;
+}
+
+.parent-fa-th {
+  grid-column: 5 / 6;
+}
+
+/*/////////////////////////////////////////////////////////*/
+/*top navigation styles*/
+
+/*header information fill*/
+/*/////////////////////////////////////////////////////////////*/
+.header-title-menu {
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  grid-template: auto / 1fr 300px;
+}
+
+.header-title {
   font-size: 2rem;
-  line-height: 2rem;
-  padding: 2rem;
+  margin-bottom: 0;
+  margin-left: 2rem;
+}
+
+.header-sub-title {
+  grid-column: 1 / 2;
+  margin-left: 2rem;
+}
+
+.header-sub-title * {
+  color: #000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.parent-fa-map-marker-alt {
+  margin-right: 0;
+}
+
+.parent-fa-circle {
+  font-size: 0.5rem;
+  margin-right: 0.25rem;
   vertical-align: middle;
 }
 
-.fa-bars::before,
-.fa-search::before,
-.fa-user-plus::before {
-  border-right: 2px solid #000;
-  padding-left: 0;
+.second-sub-title:hover {
+  color: blue;
+  cursor: pointer;
 }
 
-.fa-search,
-.fa-search::before {
-  border: none;
-  margin-left: 0;
-  padding-left: 0;
-  padding-right: 0.5rem;
+.parent-header-button-row {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  position: relative;
+  bottom: -60px; 
+  left: 80px;
 }
 
-.fa-user-plus,
-.fa-user-plus::before {
-  padding: 0; 
+.parent-header-button-row * {
+  display: inline-block;
 }
 
-.fa-user-plus::before {
-  border: none;
-  background-color: #354051;
-  padding: 100%;
-  padding-bottom: 2.2rem;
+.header-button {
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 30px;
+  margin-left: 3px;
+  width: 30px;
+}
+
+.header-button .fas {
+  color: #000;
+}
+
+.header-button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.header-button-open {
+  border-radius: 30px;
+  width: 80px;
+}
+
+.header-button-open .fa-circle {
+  color: green;
+}
+
+.header-button-open-text{
+  color: #000;
+  margin: 0;
+}
+
+.header-button-bookmark {
+
+}
+
+.header-button-edit {
+
+}
+
+.header-button-trash {
+
+}
+
+.site-option-link-row {
+
+}
+
+.site-option-link-row * {
+  display: inline-block;
 }
 
 
 
+/*header information fill*/
+/*/////////////////////////////////////////////////////////////*/
 
 .sidebar {
   background-color: #354051;
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 13;
   padding-bottom: 10rem;
@@ -190,8 +318,3 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
-header {
-  grid-row-start: 2;
-  grid-row-end: 5;
-}
