@@ -3,25 +3,25 @@
 }
 
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   display: grid;
   font-family: 'Roboto', sans-serif;
   grid-template-columns: 180px 1fr;
-  grid-template-rows: auto;
   margin: 0;
 }
 
-.main-page-fill {
+.main-page {
   display: grid;
   grid-column: 2 / 3;
   grid-template: 250px 1fr/ initial;
 }
 
 header {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #d8d8d8;
   display: grid;
   grid-column: 1 / 2;
   grid-template-rows: 1fr 1fr 1fr;
-  height: 250px;
 }
 
 /*top navigation styles*/
@@ -30,7 +30,7 @@ header {
   border-bottom: 1px solid #000;
   display: grid;
   grid-column: 1 / 3;
-  grid-template: auto / 83px 1fr 83px 83px 83px;
+  grid-template: auto / 79px 1fr 79px 79px 79px;
 }
 
 .top-nav .fas {
@@ -99,8 +99,8 @@ header {
 .header-title-menu {
   display: grid;
   grid-column: 1 / 3;
-  grid-row: 2 / 4;
-  grid-template: auto / 1fr 300px;
+  grid-template: 1fr 40px 40px / 1fr 300px;
+  height: 80px;
 }
 
 .header-title {
@@ -191,24 +191,43 @@ header {
 }
 
 .site-option-link-row {
+  grid-column: 1 / 3;
+}
+
+.site-option-link-row ul {
+  margin: 0;
+  padding: 0;
 
 }
 
-.site-option-link-row * {
+.site-option-link-row li {
   display: inline-block;
+  height: 40px;
+  margin-left: 30px;
 }
 
+.site-option-link-row li:hover {
+  border-bottom: 2px solid blue;
+  padding-bottom: 10px;
+}
 
+.site-option-link-row h4:hover {
+  color: #000;
+  cursor: pointer;
 
-/*header information fill*/
+}
+
 /*/////////////////////////////////////////////////////////////*/
+/*header information fill*/
+
+/*sidebar*/
+/*////////////////////////////////////////////////////////////////*/
 
 .sidebar {
   background-color: #354051;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
-  grid-row-end: 13;
   padding-bottom: 10rem;
 }
 
@@ -317,4 +336,306 @@ header {
   color: #CECEE5;
   font-family: 'Roboto', sans-serif;
 }
+
+/*/////////////////////////////////////////////////////////////////*/
+/*sidebar*/
+
+
+/*main page fill*/
+/*///////////////////////////////////////////////////////////////*/
+
+.main-page-fill {
+  display: grid;
+  background-color: #ebf2f6;
+  grid-column: 1 / 2;
+  grid-template-columns: 1fr;
+  grid-template-rows: 350px 1fr;
+  height: 200vh;
+}
+
+.main-page-charts {
+  border-bottom: 1px solid #000;
+  grid-column: 1 / 3;
+  margin-top: 30px;
+
+}
+
+.chart-applicants {
+  display: inline-block;
+}
+
+.chart-applicants * {
+  height: 10rem;
+}
+
+.chart-applicants-applicants {
+  margin-left: 30px;
+}
+
+.chart-percentage {
+  font-size: 0.5rem;
+}
+
+.chart-description {
+  font-size: 0.15rem;
+}
+
+.bar-graph {
+  height: 11rem;
+  margin-right: 30px;
+  position: absolute;
+  right: 0;
+  width: auto;
+}
+
+.section-chart-button {
+  border: 1px solid #000;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-left: 145px;
+  position: absolute;
+  top: 450px;
+  left: 210px;
+  width: 200px;
+}
+
+.section-chart-button:hover,
+.section-graph-button:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+
+.section-chart-button-text,
+.section-graph-button-text {
+  color: #000;
+}
+
+.section-graph-button {
+  border: 1px solid #000;
+  border-radius: 30px;
+  display: block;
+  margin-top: 30px;
+  position: absolute;
+  top: 450px;
+  right: 120px;
+  width: 150px;
+}
+
+/*bottom page fill*/
+/*//////////////////////////////////////*/
+.bottom-page-fill {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-template-columns: 1fr 300px;
+}
+
+.job-description-container {
+  grid-column: 1 / 2;
+}
+
+.job-description {
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  height: calc(100% - 160px);
+  margin: 30px;
+  margin-top: 70px;
+  width: 659px;
+}
+
+.job-description-header {
+  background-color: #5d6673;
+  grid-column: 1 / 3;
+  height: 70px;
+}
+
+.job-description-header-text {
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 20px;
+}
+
+.job-description-header-button {
+  background-color: #717985;
+  border-style: none;
+  display: inline-block;
+  grid-column: 2 / 3;
+  height: 35px;
+  margin-left: 80px;
+  margin-top: 18px;
+  width: 100px;
+  
+}
+
+.job-description-header-button * {
+  display: inline-block;
+}
+
+.job-description-header-button-text {
+  color: #fff;
+  margin: 0;
+}
+
+.job-description-text {
+  grid-column: 2 / 3;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.job-description hr {
+  grid-column: 1 / 3;
+  height: 0;
+  width: 100%;
+}
+
+.job-description-text-title {
+  grid-column: 1 / 2;
+  margin-left: 20px;
+}
+
+.job-description-text-title,
+.job-description-text {
+  color: #5d6673;
+  display: inline-block;
+}
+
+.hiring-lead-info {
+  grid-column: 2 / 3;
+}
+
+.hiring-lead-image {
+  display: inline-block;
+  /*font-size: 30px;*/
+}
+
+.hiring-lead-name {
+  display: inline-block;
+}
+
+.social-links {
+  grid-column: 2 / 3;
+}
+
+.social-links-button {
+  display: block;
+  font-size: 0.8rem;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  width: calc(100% - 40px);
+}
+
+.social-links-button * {
+  display: inline-block;
+}
+
+.social-links-button h4,
+.social-links-button i {
+  color: #fff;
+}
+
+.social-links-button i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+ 
+}
+
+.social-links-button-facebook {
+  background-color: #4b70c1;
+  margin-top: 70px;
+
+}
+
+.social-links-button-twitter {
+  background-color: #02aaef;
+}
+
+.social-links-button-linkedin {
+  background-color: #0582bd;
+}
+
+.sharing-options {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 60px;
+}
+
+.sharing-options h2,
+.sharing-options i {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.sharing-options i {
+  margin-right: 5px;
+}
+
+.sharing-options h2 {
+  margin-top: 30px;
+}
+
+.sharing-options hr {
+  margin-top: 50px;
+}
+
+.sharing-options-form-parent {
+  height: 30px;
+  position: relative;
+}
+
+.sharing-options-button,
+.sharing-options-text-input {
+  height: 40px;
+}
+
+.sharing-options-text-input{
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  position: absolute;
+  width: 100%;
+
+}
+
+.sharing-options-button {
+  background-color: #46b7c2;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  right: 0;
+  top: 0;
+  width: 50px;
+  margin-left: 0;
+  position: absolute;
+}
+
+.sharing-options-button[value] {
+  color: #fff;
+}
+
+
+
+
+/*///////////////////////////////////////*/
+/*bottom page fill*/
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////*/
+/*main page fill*/
 
