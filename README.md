@@ -9,4 +9,4 @@
 ### Here is my static comp...
 
 
-![alt text](images/'Screen Shot 2018-07-31 at 10.06.19 PM.png' "my static comp")
+![alt text](images/my-comp-screenshot.png "my static comp")
