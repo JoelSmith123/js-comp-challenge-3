@@ -14,9 +14,13 @@
 
       <nav class='top-nav'>
         <section class='icon-parent parent-fa-bars hamburger-menu'><i class="fas fa-bars"></i></section>
-        <form>
+        <form class='desktop-input'>
           <section class='parent-fa-search'><i class="fas fa-search"></i></section>
-          <input type="search" id="mySearch" name="q" placeholder="Search for a job, task, or resume">  
+          <input class='desktop-input' type="search" id="mySearch" name="q" placeholder="Search for a job, task, or resume">
+        </form>
+        <form class='mobile-input'>
+          <section class='parent-fa-search'><i class="fas fa-search"></i></section>
+          <input type="search" id="mySearch" name="q" placeholder="Search">
         </form>
         <section class='icon-parent parent-fa-user-plus'><i class="fas fa-user-plus"></i></section>
         <section class='icon-parent parent-fa-list-alt'><i class="fas fa-list-alt"></i></section>
@@ -32,6 +36,7 @@
           <h4 class='first-sub-title'>San Francisco, CA</h4> 
           <section class='parent-fa-circle'><i class="fas fa-circle"></i></section>
           <h4 class='second-sub-title'>Preview this post</h4>
+          <h4 class='scroll-indicator'>Scroll>>></h4>
         </section>
 
         <section class='parent-header-button-row'>
@@ -72,12 +77,20 @@
             <div class='circular-charts-row-container'>
               <section class='chart-applicants'>
                 <svg viewbox="0 0 36 36">
-                  <path
+                  <path class='outline-circle'
                   d="M18 2.0845
                   a 15.9155 15.9155 0 0 1 0 31.831
                   a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#37b8b3";
+                  fill="none"                  
+                  stroke-width="1.5";
+                  stroke-dasharray="100, 100"               
+                  />
+                  <path class='circle'
+                  d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"  
+                  stroke="#37b8b3";               
                   stroke-width="1.5";
                   stroke-dasharray="80, 100"               
                   />
@@ -87,14 +100,22 @@
               </section>
               <section class='chart-applicants'>
                 <svg viewbox="0 0 36 36">
-                  <path
+                  <path class='outline-circle'
                   d="M18 2.0845
                   a 15.9155 15.9155 0 0 1 0 31.831
                   a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#0495f0";
+                  fill="none"              
                   stroke-width="1.5";
-                  stroke-dasharray="60, 100"
+                  stroke-dasharray="100, 100"
+                  />
+                  <path class='circle'
+                  d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"    
+                  stroke="#0495f0";              
+                  stroke-width="1.5";
+                  stroke-dasharray="60, 100"               
                   />
                   <text x="8.5" y="20" class="chart-percentage">1,546</text>
                   <text x="11.5" y="24" class="chart-description">INTERVIEWS</text>
@@ -102,14 +123,22 @@
               </section>
               <section class='chart-applicants chart-applicants-right'>
                 <svg viewbox="0 0 36 36">
-                  <path
+                  <path class='outline-circle'
                   d="M18 2.0845
                   a 15.9155 15.9155 0 0 1 0 31.831
                   a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#aa5dab";
+                  fill="none"                  
                   stroke-width="1.5";
-                  stroke-dasharray="40, 100"
+                  stroke-dasharray="100, 100"
+                  />
+                  <path class='circle'
+                  d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"  
+                  stroke="#aa5dab";                
+                  stroke-width="1.5";
+                  stroke-dasharray="40, 100"               
                   />
                   <text x="11.5" y="20" class="chart-percentage">912</text>
                   <text x="12" y="24" class="chart-description">FORWARDS</text>
