@@ -21,13 +21,10 @@ body {
   grid-template-columns: 1fr;
 }
 
-/*.main-page {
-  display: grid;
-  height: 100vh;
-  grid-column: 2 / 3;
-  grid-template: 250px 1fr/ initial;
-  height: 100%;
-}*/
+
+
+/*START header styles*/
+/*////////////////////////////////////////////////////////////////*/
 
 header {
   background-color: #fff;
@@ -37,8 +34,9 @@ header {
   grid-template-rows: 1fr;
 }
 
-/*top navigation styles*/
-/*///////////////////////////////////////////////////*/
+/*START top navigation styles*/
+/*///////////////////////////////////*/
+
 .top-nav {
   border-bottom: 1px solid #000;
   display: grid;
@@ -110,11 +108,12 @@ header {
   grid-column: 5 / 6;
 }
 
-/*/////////////////////////////////////////////////////////*/
-/*top navigation styles*/
+/*////////////////////////////////////*/
+/*END top navigation styles*/
 
-/*header information fill*/
-/*/////////////////////////////////////////////////////////////*/
+/*START header information fill*/
+/*//////////////////////////////////////*/
+
 .header-title-menu {
   background-color: #fff;
   display: grid;
@@ -220,7 +219,6 @@ header {
 }
 
 .site-option-link-row li {
-  /*box-sizing: border-box;*/
   display: inline-block;
   height: 40px;
   margin-left: 30px;
@@ -242,11 +240,17 @@ header {
   cursor: pointer;
 }
 
-/*/////////////////////////////////////////////////////////////*/
-/*header information fill*/
+/*/////////////////////////////////////////*/
+/*END header information fill*/
 
-/*sidebar*/
+/*/////////////////////////////////////////////////////////////*/
+/*END header styles*/
+
+
+
+/*START sidebar*/
 /*////////////////////////////////////////////////////////////////*/
+
 .sidebar {
   background-color: #354051;
   grid-column-start: 1;
@@ -362,17 +366,18 @@ header {
 }
 
 /*/////////////////////////////////////////////////////////////////*/
-/*sidebar*/
+/*END sidebar*/
 
 
-/*main page fill*/
+
+/*START main page fill*/
 /*///////////////////////////////////////////////////////////////*/
+
 .main-page-fill {
   display: grid;
   background-color: #ebf2f6;
   grid-column: 1 / 2;
   grid-template-columns: 1fr;
-  /*grid-template-rows: 350px 1fr;*/
 }
 
 .main-page-charts {
@@ -410,8 +415,6 @@ header {
 
 .chart-applicants svg {
   display: block;
-  /*height: auto;*/
-  /*width: 100%;*/
 }
 
 .outline-circle {
@@ -512,7 +515,8 @@ header {
 /*END chart and graph article buttons*/
 
 
-/*bottom page fill*/
+
+/*START bottom page fill*/
 /*//////////////////////////////////////*/
 .bottom-page-fill {
   display: grid;
@@ -521,6 +525,9 @@ header {
   height: 100%;
   max-height: 80vw;
 }
+
+/*START job description container styles*/
+/*//////////////////////////////////////////////*/
 
 .job-description-container {
   box-sizing: border-box;
@@ -539,8 +546,6 @@ header {
   display: inline-block;
   width: 100%;
   height: auto;
-  /*grid-template-columns: 250px 1fr;*/
-  /*height: 100%;*/
 }
 
 .job-description-table {
@@ -549,31 +554,20 @@ header {
 }
 
 .job-description-header {
-  /*display: grid;
-  grid-template-columns: 250px 1fr;*/
   background-color: #5d6673;
-  /*grid-column: 1 / 3;
-  height: 70px;*/
 }
 
 .job-description-header-text {
   color: #fff;
   display: inline-block;
   font-size: 18px;
-  /*margin: 0;
-  padding: 0;
-  position: relative;
-  top: calc(50% - 10px);
-  left: 50px;
-*/}
+}
 
 .job-description-header-text-th,
 .job-description-header-button-th {
   padding: 22px;
   padding-left: 26px;
 }
-
-
 
 .job-description-header-button-th {
   padding-left: 0;
@@ -585,7 +579,6 @@ header {
   display: inline-block;
   grid-column: 2 / 3;
   height: 42px;
-  /*margin-top: 18px;*/
   width: 120px;
 }
 
@@ -594,10 +587,10 @@ header {
 }
 
 td, th {
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    padding: 42px 26px;
-    padding-right: 0;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  padding: 42px 26px;
+  padding-right: 0;
 }
 
 .job-description-header-button-th .fa-pen,
@@ -613,9 +606,6 @@ td, th {
 }
 
 .job-description-text {
-  /*grid-column: 2 / 3;
-  margin-left: 10px;
-  margin-right: 20px;*/
   color: #9ba1a9;
   font-size: 18px;
   font-weight: 400;
@@ -628,14 +618,11 @@ td, th {
 }
 
 .job-description-text-title {
-  /*grid-column: 1 / 2;
-  margin-left: 50px;*/
   margin: 0;
 }
 
 .job-description-text-title {
   color: #5d6673;
-  /*display: inline-block;*/
 }
 
 .job-description-text-description {
@@ -658,6 +645,12 @@ td, th {
   padding-left: 10px;
 }
 
+/*////////////////////////////////////////////*/
+/*END job description container styles*/
+
+/*START social links container styles*/
+/*////////////////////////////////////////////////*/
+
 .social-links-container {
   display: inline-block;
   grid-column: 2 / 3;
@@ -669,14 +662,12 @@ td, th {
   display: inline-block;
   height: 100%;
   width: 100%;
-  /*margin-bottom: 50px;*/
 }
 
 .social-links-button {
   display: block;
   font-size: 1rem;
   height: 50px;
-  /*margin-top: 20px;*/
   margin: 20px auto 0;
   position: relative;
   width: 100%;
@@ -714,13 +705,6 @@ td, th {
   background-color: #0582bd;
 }
 
-/*.sharing-options {
-  display: block;
-  margin-right: 50px;
-  margin-top: 60px;
-  max-height: 100%;
-}
-*/
 .sharing-options-title,
 .sharing-options-title-icon {
   color: #000;
@@ -780,16 +764,15 @@ td, th {
   font-size: 12px;
 }
 
-.sharing-input-last {
-  /*margin-bottom: 100px;*/
-}
+/*/////////////////////////////////////////////*/
+/*END social link container styles*/
 
 /*///////////////////////////////////////*/
-/*bottom page fill*/
+/*END bottom page fill*/
 
 
 /*///////////////////////////////////////////////////////////////////*/
-/*main page fill*/
+/*END main page fill*/
 
 @media only screen and (max-width: 1025px) {
 
@@ -863,7 +846,6 @@ td, th {
     grid-template-columns: 1fr;
   }
 
-
   .social-links-container {
     grid-column: 1 / 2;
     margin-left: 100px;
@@ -875,10 +857,6 @@ td, th {
     margin-bottom: 100px;
   }
 
-
 }
-
-
-
 
 
