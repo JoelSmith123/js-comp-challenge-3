@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Static Comp Challenge 3 - Joel Smith</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -12,7 +13,7 @@
     <header>
 
       <nav class='top-nav'>
-        <section class='icon-parent parent-fa-bars'><i class="fas fa-bars"></i></section>
+        <section class='icon-parent parent-fa-bars hamburger-menu'><i class="fas fa-bars"></i></section>
         <form>
           <section class='parent-fa-search'><i class="fas fa-search"></i></section>
           <input type="search" id="mySearch" name="q" placeholder="Search for a job, task, or resume">  
@@ -65,97 +66,126 @@
 
       </header>
       <section class="main-page-fill">
-
         <section class='main-page-charts'>
-          <section class='chart-applicants chart-applicants-applicants'>
-            <svg viewbox="0 0 36 36">
-              <path
-              d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831
-              a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none"
-              stroke="#37b8b3";
-              stroke-width="1.5";
-              stroke-dasharray="75, 100"               
-              />
-              <text x="8.5" y="20" class="chart-percentage">3,154</text>
-              <text x="11" y="24" class="chart-description">APPLICANTS</text>
-            </svg>
-          </section>
-          <section class='chart-applicants'>
-            <svg viewbox="0 0 36 36">
-              <path
-              d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831
-              a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none"
-              stroke="#0495f0";
-              stroke-width="1.5";
-              stroke-dasharray="75, 100"
-              />
-              <text x="8.5" y="20" class="chart-percentage">1,546</text>
-              <text x="11.5" y="24" class="chart-description">INTERVIEWS</text>
-            </svg>
-          </section>
-          <section class='chart-applicants'>
-            <svg viewbox="0 0 36 36">
-              <path
-              d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831
-              a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none"
-              stroke="#aa5dab";
-              stroke-width="1.5";
-              stroke-dasharray="75, 100"
-              />
-              <text x="11.5" y="20" class="chart-percentage">912</text>
-              <text x="12" y="24" class="chart-description">FORWARDS</text>
-            </svg>
-          </section>
 
-          <img class="bar-graph" src="images/image.png">
+          <article class='circular-charts-article'>
+            <div class='circular-charts-row-container'>
+              <section class='chart-applicants'>
+                <svg viewbox="0 0 36 36">
+                  <path
+                  d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#37b8b3";
+                  stroke-width="1.5";
+                  stroke-dasharray="80, 100"               
+                  />
+                  <text x="8.5" y="20" class="chart-percentage">3,154</text>
+                  <text x="11" y="24" class="chart-description">APPLICANTS</text>
+                </svg>
+              </section>
+              <section class='chart-applicants'>
+                <svg viewbox="0 0 36 36">
+                  <path
+                  d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#0495f0";
+                  stroke-width="1.5";
+                  stroke-dasharray="60, 100"
+                  />
+                  <text x="8.5" y="20" class="chart-percentage">1,546</text>
+                  <text x="11.5" y="24" class="chart-description">INTERVIEWS</text>
+                </svg>
+              </section>
+              <section class='chart-applicants chart-applicants-right'>
+                <svg viewbox="0 0 36 36">
+                  <path
+                  d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#aa5dab";
+                  stroke-width="1.5";
+                  stroke-dasharray="40, 100"
+                  />
+                  <text x="11.5" y="20" class="chart-percentage">912</text>
+                  <text x="12" y="24" class="chart-description">FORWARDS</text>
+                </svg>
+              </section>
+              <button type='submit' class='section-chart-button'>
+                <h4 class='section-chart-button-text'> TOTALS - Out of 5,231 views</h4>
+              </button>
+            </div>
+          </article>
 
-          <button type='submit' class='section-chart-button'>
-            <h4 class='section-chart-button-text'> TOTALS - Out of 5,231 views</h4>
-          </button>
-
-          <button type='submit' class='section-graph-button'>
-            <h4 class='section-graph-button-text'>APPLICANTS/DAY</h4>
-          </button>
+          <article class="bar-graph-article">
+            <div class="bar-graph-container">
+              <img class="bar-graph" src="images/image.png">
+              <button type='submit' class='section-graph-button'>
+                <h4 class='section-graph-button-text'>APPLICANTS/DAY</h4>
+              </button>
+            </div>
+          </article>
         </section>
 
         <section class="bottom-page-fill">
 
           <section class="job-description-container">
             <section class="job-description">
-              <section class="job-description-header">
-                <h4 class="job-description-header-text">JOB DESCRIPTION</h4>
-                <button type='submit' class='job-description-header-button'>
-                  <i class="fas fa-pen"></i>
-                  <h4 class='job-description-header-button-text'> EDIT</h4>
-                </button>
-              </section>
-              <h4 class='job-description-text-title'>POSITION TITLE</h4> 
-              <h4 class='job-description-text'>Customer Service Representative</h4>
-              <hr />
-              <h4 class='job-description-text-title'>LOCATION</h4><h4 class='job-description-text'>San Francisco, CA</h4>
-              <hr />
-              <h4 class='job-description-text-title'>EMPLOYMENT TYPE</h4><h4 class='job-description-text'>Full-time</h4>
-              <hr />
-              <h4 class='job-description-text-title'>EXPERIENCE</h4><h4 class='job-description-text'>Mid-level</h4>
-              <hr />
-              <h4 class='job-description-text-title'>STATUS</h4><h4 class='job-description-text'>Open</h4>
-              <hr />
-              <h4 class='job-description-text-title'>DESCRIPTION</h4><h4 class='job-description-text'>The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness reduce customer service wait times while doing a backhand spring and eating a ham sandwich.</h4>
-              <hr />
-              <h4 class='job-description-text-title'>HIRING LEAD</h4>
-              <section class='hiring-lead-info'><i class='hiring-lead-image fas fa-user-circle'></i><h4 class='job-description-text hiring-lead-name'>Tom Tizzy</h4></section>
-              <hr />
-              <h4 class='job-description-text-title'>APPROVED</h4><h4 class='job-description-text'>SALARY $58,000</h4>
+              <table class='job-description-table'>
+                <tr class="job-description-header">
+                  <th width="30%" class="job-description-header-text-th"><h4 class="job-description-header-text">JOB DESCRIPTION</h4></th>
+                  <th class="job-description-header-button-th">
+                    <button type='submit' class='job-description-header-button'>
+                    <i class="fas fa-pen"></i>
+                    <h4 class='job-description-header-button-text'> EDIT</h4>
+                    </button>
+                  </th>
+                </tr>
+                <tr>
+                  <th><h4 class='job-description-text-title'>POSITION TITLE</h4></th>
+                  <th class="job-description-text-th"><h4 class='job-description-text'>Customer Service Representative</h4></th>
+                </tr>            
+                <tr>
+                  <th><h4 class='job-description-text-title'>LOCATION</h4></th>
+                  <th class="job-description-text-th"><h4 class='job-description-text'>San Francisco, CA</h4></th>                  
+                </tr>
+                <tr>
+                  <th><h4 class='job-description-text-title'>EMPLOYMENT TYPE</h4></th>
+                  <th class="job-description-text-th"><h4 class='job-description-text'>Full-time</h4></th>                  
+                </tr>
+                <tr>
+                  <th><h4 class='job-description-text-title'>EXPERIENCE</h4></th>
+                  <th class="job-description-text-th"><h4 class='job-description-text'>Mid-level</h4></th>                  
+                </tr>
+                <tr>
+                  <th><h4 class='job-description-text-title'>STATUS</h4></th>
+                  <th class="job-description-text-th"><h4 class='job-description-text'>Open</h4></th>                  
+                </tr>
+                <tr>
+                  <th><h4 class='job-description-text-title'>DESCRIPTION</h4></th>
+                  <th class="job-description-text-th"><h4 class='job-description-text-description'>The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness reduce customer service wait times while doing a backhand spring and eating a ham sandwich.</h4></th>                  
+                </tr>
+                <tr>
+                  <th><h4 class='job-description-text-title'>HIRING LEAD</h4></th>
+                  <th class="job-description-text-th">
+                    <img class='hiring-lead-image' src="images/detective-diaz.jpg">
+                    <h4 class='job-description-text hiring-lead-name'>Detective Rosa Diaz</h4>
+                  </th>                  
+                </tr>
+                <tr>
+                  <th><h4 class='job-description-text-title'>APPROVED</h4></th>
+                  <th class="job-description-text-th"><h4 class='job-description-text'>SALARY $58,000</h4></th>                  
+                </tr>                
+              </table>
             </section>            
           </section>
 
-          <section class="social-links">
+          <section class="social-links-container">
+            <section class="social-links">
             <button type='submit' class='social-links-button social-links-button-facebook'>
               <i class="fab fa-facebook-f"></i>
               <h4>Post to Facebook</h4>
@@ -169,29 +199,30 @@
               <h4>Post to LinkedIn</h4>
             </button>
 
-            <section class='sharing-options'>
-              <h2><i class="fas fa-globe"></i>Link to this Job</h2>
-              <p>Lorem ipsum dolor sit amet, constdedfur etnf jdfle ken, oejti thygr. Interasf fdsjfnj kewnr rewgnsun.</p>
+            <!-- <section class='sharing-options'> -->
+              <h2 class="sharing-options-title"><i class="fas fa-globe sharing-options-title-icon"></i>Link to this Job</h2>
+              <p class="sharing-options-text">Lorem ipsum dolor sit amet, constdedfur etnf jdfle ken, oejti thygr. Interasf fdsjfnj kewnr rewgnsun.</p>
               <section class="sharing-options-form-parent">
                 <input class="sharing-options-text-input" type="text" name="">
                 <input class="sharing-options-button" type="button" name="" value="Copy">
               </section>
-              <hr />
+              <hr class="sharing-options-hr"/>
               
-              <h2><i class="fas fa-columns"></i>Use the Button Widget </h2>
-              <p>This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
+              <h2 class="sharing-options-title"><i class="fas fa-columns sharing-options-title-icon"></i>Use the Button Widget </h2>
+              <p class="sharing-options-text">This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
               <section class="sharing-options-form-parent">
                 <input class="sharing-options-text-input" type="text" name="">
                 <input class="sharing-options-button" type="button" name="" value="Copy">
               </section>
-              <hr />
+              <hr class="sharing-options-hr"/>
               
-              <h2><i class="fas fa-paper-plane"></i>Upload Resumes  by Email</h2>
-              <p>You can automatically upload multiple resumes to this job by emailing the address below.</p>
+              <h2 class="sharing-options-title"><i class="fas fa-paper-plane sharing-options-title-icon"></i>Upload Resumes  by Email</h2>
+              <p class="sharing-options-text">You can automatically upload multiple resumes to this job by emailing the address below.</p>
               <section class="sharing-options-form-parent">
                 <input class="sharing-input-last sharing-options-text-input" type="text" name="">
               </section>
-            </section>  
+            <!-- </section>   -->
+          </section>
 
           </section>
           
@@ -238,25 +269,8 @@
         <li class="sidebar-link"><i class="fas fa-square checkbox-executive"></i><h3 class="sidebar-link-text">Executive</h3></li>
         <li class="sidebar-link"><i class="fas fa-square checkbox-human-resources"></i><h3 class="sidebar-link-text">Human Resources</h3></li>
       </ul>
-      <!-- <ul class="sidebar-ul">
-        <li class="sidebar-link">
-          <input class="sidebar-link-checkbox" type="checkbox" id="administration" name="administration" value="administration">
-          <label for="administration">Administration</label>
-        </li>
-        <li class="sidebar-link">
-          <input class="sidebar-link-checkbox" type="checkbox" id="design" name="design" value="design">
-          <label for="design">Design</label>
-        </li>
-        <li class="sidebar-link">
-          <input class="sidebar-link-checkbox" type="checkbox" id="executive" name="executive" value="executive">
-          <label for="executive">Executive</label>
-        </li>
-        <li class="sidebar-link">
-          <input class="sidebar-link-checkbox" type="checkbox" id="human-resources" name="human resources" value="human resources">
-          <label for="human-resources">Human Resources</label>
-        </li>
-      </ul> -->
     </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src='script.js'></script>
   </body>
   </html>
