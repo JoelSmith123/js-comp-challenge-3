@@ -12,17 +12,21 @@ body {
   overflow-x: hidden;
   display: grid;
   font-family: 'Roboto', sans-serif;
-  height: 100%;
+  height: 100vh;
   grid-template-columns: 200px 1fr;
   margin: 0;
 }
 
-.main-page {
+.body-sidebar-collapse {
+  grid-template-columns: 1fr;
+}
+
+/*.main-page {
   display: grid;
   height: 100vh;
   grid-column: 2 / 3;
   grid-template: 250px 1fr/ initial;
-}
+}*/
 
 header {
   background-color: #fff;
@@ -35,11 +39,11 @@ header {
 /*top navigation styles*/
 /*///////////////////////////////////////////////////*/
 .top-nav {
-  background-color: #fff;
   border-bottom: 1px solid #000;
   display: grid;
   grid-column: 1 / 3;
   grid-template: auto / 79px 1fr 79px 79px 79px;
+  width: 100%;
 }
 
 .top-nav .fas {
@@ -48,11 +52,9 @@ header {
 
 .icon-parent {
   box-sizing: border-box;
-  /*border: 1px solid #000;*/
   display: inline-block;
   line-height: 78px;
   text-align: center;
-
 }
 
 .icon-parent:hover {
@@ -60,8 +62,17 @@ header {
   cursor: pointer;
 }
 
+.hamburger-menu {
+
+}
+
+.parent-fa-bars,
+.parent-fa-user-plus,
+.parent-fa-list-alt {
+  border-right: 1px solid #000;  
+}
+
 .parent-fa-bars {
-  border-right: 1px solid #000;
   grid-column: 1 / 2;
 }
 
@@ -73,7 +84,7 @@ header {
 }
 
 #mySearch {
-    border-style: none;
+  border-style: none;
   display: inline-block;
   font-size: 1rem;
   height: 3rem;
@@ -81,18 +92,12 @@ header {
   width: 85%;
 }
 
-#mySearch::placeholder {
-  /*font-size: 1.5rem;*/
-}
-
 .parent-fa-user-plus {
   border-left: 1px solid #000;
-  border-right: 1px solid #000;
   grid-column: 3 / 4;
 }
 
 .parent-fa-list-alt {
-  border-right: 1px solid #000;
   grid-column: 4 / 5;
 }
 
@@ -189,21 +194,8 @@ header {
   margin: 0;
 }
 
-.header-button-bookmark {
-
-}
-
-.header-button-edit {
-
-}
-
-.header-button-trash {
-
-}
-
 .site-option-link-row {
   grid-column: 1 / 3;
-  /*margin-top: op: 20px;*/
 }
 
 .site-option-link-row ul {
@@ -229,7 +221,6 @@ header {
 .site-option-link-row h4:hover {
   color: #000;
   cursor: pointer;
-
 }
 
 /*/////////////////////////////////////////////////////////////*/
@@ -237,7 +228,6 @@ header {
 
 /*sidebar*/
 /*////////////////////////////////////////////////////////////////*/
-
 .sidebar {
   background-color: #354051;
   grid-column-start: 1;
@@ -246,6 +236,10 @@ header {
   grid-row-start: 1;
   grid-row-end: 5;
   padding-bottom: 10rem;
+}
+
+.sidebar-hide {
+  display: none;
 }
 
 .sidebar .profile-name-link,i,h2,h3,h4 {
@@ -274,7 +268,6 @@ header {
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
-  /*text-align: center;*/
 }
 
 .name-dropdown {
@@ -300,7 +293,6 @@ header {
 
 .sidebar hr {
   border-color: #151920;
-  /*width: 1rem;*/
 }
 
 .sidebar-ul {
@@ -310,10 +302,6 @@ header {
 
 .sidebar-ul, .sidebar-link-title {
   margin-left: 1rem;
-}
-
-.sidebar-link {
-  /*display: inline;*/
 }
 
 .sidebar-link-title {
@@ -355,35 +343,55 @@ header {
 
 /*main page fill*/
 /*///////////////////////////////////////////////////////////////*/
-
 .main-page-fill {
   display: grid;
   background-color: #ebf2f6;
   grid-column: 1 / 2;
   grid-template-columns: 1fr;
-  grid-template-rows: 350px 1fr;
-  /*height: ht: 150%;*/
+  /*grid-template-rows: 350px 1fr;*/
 }
 
 .main-page-charts {
-  background-color: #fff;
-  border-bottom: 1px solid #000;
+  display: grid;
   grid-column: 1 / 3;
-  padding-top: 50px;
+  grid-template-columns: 60% 40%;
+  height: 100%;
+  max-height: 25vw;
+}
 
+/*START circular charts article*/
+/*////////////////////////////////////*/
+.circular-charts-article {
+  box-sizing: border-box;
+  display: inline-block;
+  grid-column: 1 / 2;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.circular-charts-row-container {
+  box-sizing: border-box;
+  display: inline-block;
+  height: auto;
+  padding-top: 40px;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .chart-applicants {
   display: inline-block;
-}
-
-.chart-applicants * {
-  height: 12rem;
   margin-right: 20px;
+  width: calc(33% - 20px);
 }
 
-.chart-applicants-applicants {
-  margin-left: 50px;
+.chart-applicants svg {
+  display: block;
+  /*height: auto;*/
+  /*width: 100%;*/
+}
+
+.chart-applicants-right {
+  margin-right: 0;
 }
 
 .chart-percentage {
@@ -394,24 +402,46 @@ header {
   font-size: 0.15rem;
 }
 
-.bar-graph {
-  height: 14rem;
-  margin-right: 50px;
-  position: absolute;
-  right: 0;
-  top: 270px;
-  width: auto;
+/*//////////////////////////////////////*/
+/*END circular charts article*/
+
+
+/*START bar graph article*/
+/*//////////////////////////////////////*/
+.bar-graph-article {
+  display: inline-block;
+  grid-column: 2 / 3;
+  margin-top: 30px;
+  margin-right: 40px; 
 }
 
-.section-chart-button {
+.bar-graph-container {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.bar-graph {
+  display: block;
+  height: auto;
+  margin: 0;
+  width: 100%;
+}
+
+
+/*////////////////////////////////////////*/
+/*END bar graph article*/
+
+
+/*START chart and graph article buttons*/
+/*////////////////////////////////////////////*/
+.section-chart-button,
+.section-graph-button {
   border: 1px solid #000;
   border-radius: 30px;
-  margin-top: 50px;
-  margin-left: 210px;
-  position: absolute;
-  top: 450px;
-  left: 255px;
-  width: 200px;
+  display: block;
+  margin: 20px auto 0;
 }
 
 .section-chart-button:hover,
@@ -420,63 +450,86 @@ header {
   background-color: #15A3F9;
 }
 
+.section-graph-button {
+  margin-top: 43px; 
+  width: 8vw;
+}
+
 .section-chart-button-text,
 .section-graph-button-text {
   color: #000;
+  font-size: 0.6vw;
 }
 
-.section-graph-button {
-  border: 1px solid #000;
-  border-radius: 30px;
-  display: block;
-  margin-top: 30px;
-  position: absolute;
-  top: 470px;
-  right: 180px;
-  width: 150px;
-}
+/*////////////////////////////////////////*/
+/*END chart and graph article buttons*/
+
 
 /*bottom page fill*/
 /*//////////////////////////////////////*/
 .bottom-page-fill {
   display: grid;
-  grid-column: 1 / 2;
-  grid-template-columns: 1fr 500px;
+  grid-column: 1 / 3;
+  grid-template-columns: 70% 30%;
+  height: 100%;
+  max-height: 80vw;
 }
 
 .job-description-container {
+  box-sizing: border-box;
+  display: inline-block;
   grid-column: 1 / 2;
-}
+  margin: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 70px;
+} 
 
 .job-description {
   background-color: #fff;
   border: 1px solid #000;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  height: calc(100% - 160px);
-  margin: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 70px;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  /*grid-template-columns: 250px 1fr;*/
+  /*height: 100%;*/
+}
+
+.job-description-table {
+  border-collapse: collapse;
+  height: 100%;
 }
 
 .job-description-header {
-  display: grid;
-  grid-template-columns: 250px 1fr;
+  /*display: grid;
+  grid-template-columns: 250px 1fr;*/
   background-color: #5d6673;
-  grid-column: 1 / 3;
-  height: 70px;
+  /*grid-column: 1 / 3;
+  height: 70px;*/
 }
 
 .job-description-header-text {
   color: #fff;
   display: inline-block;
-  margin: 0;
+  font-size: 18px;
+  /*margin: 0;
   padding: 0;
   position: relative;
   top: calc(50% - 10px);
   left: 50px;
+*/}
+
+.job-description-header-text-th,
+.job-description-header-button-th {
+  padding: 22px;
+  padding-left: 26px;
+}
+
+
+
+.job-description-header-button-th {
+  padding-left: 0;
 }
 
 .job-description-header-button {
@@ -484,71 +537,102 @@ header {
   border-style: none;
   display: inline-block;
   grid-column: 2 / 3;
-  height: 35px;
-  margin-top: 18px;
-  width: 100px;
-  
+  height: 42px;
+  /*margin-top: 18px;*/
+  width: 120px;
 }
 
 .job-description-header-button * {
   display: inline-block;
 }
 
+td, th {
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    padding: 42px 26px;
+    padding-right: 0;
+}
+
+.job-description-header-button-th .fa-pen,
+.job-description-header-button-text {
+  font-size: 16px;
+}
+
 .job-description-header-button-text {
   color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
   margin: 0;
 }
 
 .job-description-text {
-  grid-column: 2 / 3;
+  /*grid-column: 2 / 3;
   margin-left: 10px;
-  margin-right: 20px;
+  margin-right: 20px;*/
+  color: #9ba1a9;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
 }
 
-.job-description hr {
-  grid-column: 1 / 3;
-  height: 0;
-  width: 100%;
+.job-description-text-th {
+  padding-left: 0;
+  padding-right: 26px;
 }
 
 .job-description-text-title {
-  grid-column: 1 / 2;
-  margin-left: 50px;
+  /*grid-column: 1 / 2;
+  margin-left: 50px;*/
+  margin: 0;
 }
 
-.job-description-text-title,
-.job-description-text {
+.job-description-text-title {
   color: #5d6673;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
-.hiring-lead-info {
-  grid-column: 2 / 3;
+.job-description-text-description {
+  color: #9ba1a9;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin: 0
 }
 
 .hiring-lead-image {
   display: inline-block;
-  /*font-size: 30px;*/
+  border-radius: 50%;
+  height: 50px;
+  vertical-align: middle;
 }
 
 .hiring-lead-name {
   display: inline-block;
+  padding-left: 10px;
+}
+
+.social-links-container {
+  display: inline-block;
+  grid-column: 2 / 3;
+  margin-right: 50px;
+  margin-top: 70px;
 }
 
 .social-links {
-  grid-column: 2 / 3;
-  height: 100%
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  /*margin-bottom: 50px;*/
 }
 
 .social-links-button {
   display: block;
   font-size: 1rem;
-  height: 70px;
-  margin-top: 20px;
-  margin-left: 0px;
-  margin-right: 50px;
+  height: 4vw;
+  /*margin-top: 20px;*/
+  margin: 20px auto 0;
   position: relative;
-  width: calc(100% - 40px);
+  width: 100%;
 }
 
 .social-links-button * {
@@ -558,6 +642,7 @@ header {
 .social-links-button h4,
 .social-links-button i {
   color: #fff;
+  font-size: 1vw;
 }
 
 .social-links-button i {
@@ -571,8 +656,7 @@ header {
 
 .social-links-button-facebook {
   background-color: #4b70c1;
-  margin-top: 70px;
-
+  margin-top: 0;
 }
 
 .social-links-button-twitter {
@@ -583,33 +667,34 @@ header {
   background-color: #0582bd;
 }
 
-.sharing-options {
-  /*margin-left: 20px;*/
+/*.sharing-options {
+  display: block;
   margin-right: 50px;
   margin-top: 60px;
+  max-height: 100%;
 }
-
-.sharing-options h2,
-.sharing-options i {
+*/
+.sharing-options-title,
+.sharing-options-title-icon {
   color: #000;
   font-size: 1.5rem;
 }
 
-.sharing-options i {
+.sharing-options-title-icon {
   margin-right: 10px;
 }
 
-.sharing-options h2 {
-  margin-top: 60px;
+.sharing-options-title {
+  margin-top: 40px;
   margin-bottom: 30px;
 }
 
-.sharing-options p {
+.sharing-options-text {
   line-height: 1.5;
   margin-bottom: 30px;
 }
 
-.sharing-options hr {
+.sharing-options-hr {
   margin-top: 90px;
 }
 
@@ -620,7 +705,7 @@ header {
 
 .sharing-options-button,
 .sharing-options-text-input {
-  height: 60px;
+  height: 4vw;
 }
 
 .sharing-options-text-input{
@@ -629,7 +714,6 @@ header {
   border: 1px solid #000;
   position: absolute;
   width: 100%;
-
 }
 
 .sharing-options-button {
@@ -639,19 +723,19 @@ header {
   border: 1px solid #000;
   right: 0;
   top: 0;
-  width: 80px;
+  width: 5vw;
   margin-left: 0;
   position: absolute;
 }
 
 .sharing-options-button[value] {
   color: #fff;
+  font-size: 0.8vw;
 }
 
 .sharing-input-last {
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
 }
-
 
 /*///////////////////////////////////////*/
 /*bottom page fill*/
@@ -659,4 +743,21 @@ header {
 
 /*///////////////////////////////////////////////////////////////////*/
 /*main page fill*/
+
+@media only screen and (max-width: 1200px) {
+
+  /*.job-description {
+    background-color: red;
+  }*/
+
+  /*.sharing-options-title {
+    margin-top: 5.5vh;
+  }*/
+
+
+}
+
+
+
+
 
